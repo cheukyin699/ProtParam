@@ -1,0 +1,12 @@
+#!/bin/bash
+SIZE=CROPPED
+SET=XC_Proteins_
+DIR=../EMBOSS-6.6.0
+FILES=$DIR/*.fasta
+for f in $FILES
+	do
+        filename=$(basename $f)
+	printf "$filename... "
+		perl get_html_protParmValues_UserSeq.pl $f >>$DIR/../$SIZE'_'$SET.protout
+	printf "done\n"
+	done
