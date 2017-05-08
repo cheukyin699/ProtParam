@@ -122,7 +122,7 @@ sub pars_protParm_HTML{
 				$values{'insta'},
 				$values{'alipha'},
 				$values{'hydro'});
-	print "$protein_name\t" . join("\t",@pri) ."\n\n";
+	print "$protein_name\t" . join("\t",@pri) ."\n";
 
 }
 
