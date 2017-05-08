@@ -39,7 +39,10 @@ use Bio::SeqIO;
 my $inputfile = $ARGV[0];  #### amino acid
 
 my @nameArr = split(/\./, basename($inputfile));
-my $protein_name = $nameArr[0];
+my $replace = '.' . $nameArr[-1];
+$_ = basename($inputfile);
+$_ =~ s/$replace//;
+my $protein_name = $_;
 
 #my @array = split(/\//, $inputfile);
 #my $printvar = $array[$#array];
